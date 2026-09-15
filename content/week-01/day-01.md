@@ -1,99 +1,176 @@
 +++
-title = "Day 01 - 15/06/2026"
+title = "Day 01 - Comprehensive Git Handbook & Team Collaboration"
 weight = 1
 +++
 
-## Topics Learned
-
-### Git
-
-#### Common Commands
-
-| Command            | Meaning                                        |
-| ------------------ | ---------------------------------------------- |
-| git init           | Create a new Git repository                    |
-| git remote         | Manage connections to remote repositories      |
-| git clone          | Copy a remote repository to the local machine  |
-| git fetch          | Download remote changes without merging them   |
-| git pull           | Download and merge remote changes              |
-| git status         | Show the current repository state              |
-| git branch         | List, create, or delete branches               |
-| git switch         | Move to another branch                         |
-| git checkout       | Switch branches or restore files               |
-| git add            | Stage changes for the next commit              |
-| git commit         | Save staged changes to the repository history  |
-| git commit --amend | Update the latest commit                       |
-| git push           | Upload local commits to a remote repository    |
-| git reset          | Unstage changes or move commit history         |
-| git rebase         | Reapply commits on top of another branch       |
-| git rebase -i      | Edit, squash, or reorder commits interactively |
-| git stash          | Temporarily save uncommitted work              |
-| git stash pop      | Restore the latest stashed work                |
-| git merge          | Combine changes from another branch            |
-| git cherry-pick    | Apply a specific commit to the current branch  |
-
-#### Merge Conflict Handling
-
-| Situation                        | Solution in Code Source Control                                     |
-| -------------------------------- | ------------------------------------------------------------------- |
-| Keep changes from both branches  | Open the file, edit the conflict manually, then mark it as resolved |
-| Keep the current branch version  | Use `Accept Current Change` in the conflict editor                  |
-| Keep the incoming branch version | Use `Accept Incoming Change` in the conflict editor                 |
-| Cancel the merge                 | Open Source Control, use the `...` menu, then choose `Abort Merge`  |
-| Resolve conflicts manually       | Review the marked conflict blocks and keep the correct final code   |
-
-### TypeScript
-
-#### Interface vs Type
-
-- Use `interface` when the main goal is to describe object structure and support inheritance.
-- Use `type` when the shape is more complex, such as a union, tuple, primitive alias, or function type.
-- Both are valid for object modeling, so choose the one that fits the use case and team convention.
-
-#### Union Type
-
-- A union type allows a value to have more than one possible type.
-- It uses the `|` operator.
-
-#### Omit Utility Type
-
-- `Omit` creates a new type by removing one or more properties from an existing type.
-- It is useful when reusing a model but hiding fields that are not needed.
-
-#### Extends
-
-- `extends` lets an interface inherit properties from another interface.
-- It reduces duplication and keeps related types consistent.
+# GIT PRACTICE HANDBOOK — DAY 01
+> Summary of common Git commands and team collaboration standards.
 
 ---
 
-### ESLint
+## 1. Initial Git Configuration
 
-#### Purpose of ESLint
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git config --global user.name "Name"` | Set display name for commits | Very Frequently |
+| `git config --global user.email "email"` | Set email linked to commits (should match GitHub/GitLab) | Very Frequently |
+| `git config --list` | View all current Git configurations | Occasionally |
+| `git config --global core.editor "code --wait"` | Set default editor for Git (VS Code) | Occasionally |
 
-- ESLint is a static analysis tool for JavaScript and TypeScript.
-- It helps detect errors and warnings before runtime.
-- It keeps code aligned with project conventions.
+---
 
-#### Common Errors and Warnings
+## 2. Project Initialization & Clone
 
-- `no-unused-vars`: a variable is declared but not used.
-- `no-undef`: a variable is used before it is defined.
-- `react-hooks/rules-of-hooks`: React Hooks are used in the wrong place.
-- `react-hooks/exhaustive-deps`: a `useEffect` dependency is missing.
-- `no-magic-numbers`: a hard-coded number is used without clear meaning.
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git init` | Initialize a new Git repository in the current folder | Occasionally |
+| `git clone <url>` | Clone (download) a remote repository to local machine | Very Frequently |
+| `git clone -b <branch> <url>` | Clone and checkout directly into a specific branch | Frequently |
 
-## Lessons Learned
+---
 
-- Avoid **"magic numbers"**.
-- Do not commit `node_modules`.
-- Understand the difference between merge and rebase.
-- Use `git add <file>` instead of `git add .` when possible.
+## 3. Check Status & Inspect Changes
 
-### Key Principles
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git status` | View file statuses (modified, staged, untracked...) | Very Frequently |
+| `git diff` | Compare unstaged changes with the latest commit | Frequently |
+| `git diff --staged` | Compare staged changes with the latest commit | Frequently |
+| `git log` | View commit history | Very Frequently |
+| `git log --oneline --graph --all` | View concise commit history with branch graph | Frequently |
+| `git show <commit>` | View detailed modifications of a specific commit | Occasionally |
+| `git blame <file>` | See who modified each line in a file and in which commit | Occasionally |
 
-- Organize `src/` by feature or by file type.
-- Keep configuration files at the project root.
-- Always add `node_modules/` and `dist/` to `.gitignore`.
-- Use clear and descriptive folder names.
-- Group related files together for easier navigation.
+---
+
+## 4. Add Changes & Commit
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git add <file>` | Stage a specific file | Very Frequently |
+| `git add .` | Stage all changes in the current directory | Very Frequently |
+| `git commit -m "message"` | Save staged changes with a concise message | Very Frequently |
+| `git commit -am "message"` | Combine `git add` (tracked files) + `commit` in one command | Frequently |
+| `git commit --amend` | Modify the content/message of the latest commit (unpushed) | Occasionally |
+
+---
+
+## 5. Working with Branches
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git branch` | List all local branches | Very Frequently |
+| `git branch <name>` | Create a new branch without switching to it | Frequently |
+| `git checkout -b <name>` | Create a new branch and switch to it immediately | Very Frequently |
+| `git switch -c <name>` | Similar to `checkout -b` (newer, clearer syntax) | Frequently |
+| `git switch <name>` | Switch to an existing branch | Frequently |
+| `git branch -d <name>` | Delete a merged branch (safe) | Occasionally |
+| `git branch -D <name>` | Force delete a branch even if unmerged (use caution) | Rare / Caution |
+
+---
+
+## 6. Working with Remotes
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git remote -v` | View linked remote repositories (usually origin) | Frequently |
+| `git remote add origin <url>` | Link a remote repository to local project | Occasionally |
+| `git fetch` | Download latest changes from remote without merging | Very Frequently |
+| `git pull` | Fetch and automatically merge changes from remote into current branch | Very Frequently |
+| `git pull --rebase` | Fetch and rebase instead of merge (keeps commit history linear and clean) | Very Frequently |
+| `git push` | Push local commits to remote | Very Frequently |
+| `git push -u origin <branch>` | Push new branch to remote and set up upstream tracking | Very Frequently |
+| `git push --force-with-lease` | Force push safer than `--force` (checks before overwriting) | Rare / Caution |
+
+---
+
+## 7. Merge & Rebase
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git merge <branch>` | Merge another branch into current branch | Very Frequently |
+| `git rebase <branch>` | Reapply commits of current branch on top of another branch | Frequently |
+| `git rebase -i HEAD~n` | Interactive rebase to squash/edit/drop the last n commits | Occasionally |
+| `git rebase --continue` | Continue rebase process after resolving conflicts | Occasionally |
+| `git rebase --abort` | Abort rebase and return to original state | Occasionally |
+
+---
+
+## 8. Resolving Conflicts
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git status` | View which files have conflicts that need resolution | Very Frequently |
+| `git add <file>` | Mark conflict in a file as resolved | Very Frequently |
+| `git merge --abort` | Abort merge process and return to pre-merge state | Occasionally |
+| `git mergetool` | Open visual tool to assist with conflict resolution | Rare / Caution |
+
+---
+
+## 9. Stashing Changes
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git stash` | Temporarily save uncommitted changes to switch tasks/branches | Frequently |
+| `git stash pop` | Restore stashed changes and remove them from stash list | Frequently |
+| `git stash list` | View list of saved stashes | Occasionally |
+| `git stash drop` | Delete a specific stash entry | Rare / Caution |
+
+---
+
+## 10. Undo & Restore
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git restore <file>` | Discard unstaged modifications in a file | Frequently |
+| `git restore --staged <file>` | Unstage a file (keep local modifications) | Frequently |
+| `git reset --soft HEAD~1` | Undo latest commit but keep changes staged | Occasionally |
+| `git reset --hard HEAD~1` | Permanently discard latest commit and all related modifications | Rare / Caution |
+| `git revert <commit>` | Create a new commit that reverses a previous commit (safe for shared branches) | Frequently |
+
+---
+
+## 11. Version Tagging (Tag)
+
+| Command | Meaning | Team Usage Level |
+|:---|:---|:---|
+| `git tag` | List existing tags | Occasionally |
+| `git tag -a v1.0 -m "message"` | Create an annotated release tag | Occasionally |
+| `git push --tags` | Push all tags to remote repository | Occasionally |
+
+---
+
+## 12. Recommended Workflow: Feature Branch Workflow
+
+This is the standard sequence of commands when team members start working on a new feature:
+
+1. `git checkout dev && git pull` (Switch to dev branch and pull the latest code)
+2. `git checkout -b feature/feature-name` (Create a new feature branch)
+3. *... Implement code changes ...*
+4. `git add . && git commit -m "Describe changes"` (Stage and commit changes)
+5. `git pull --rebase origin main` (Sync with upstream to avoid conflicts)
+6. `git push -u origin feature/feature-name` (Push new branch to remote)
+7. Open a **Pull Request / Merge Request** on GitHub, GitLab, Bitbucket...
+8. After review & approval $\rightarrow$ **Merge into main**
+9. `git branch -d feature/feature-name` (Clean up local branch after merging)
+
+---
+
+## 13. Top Most Used Git Commands in Teams
+
+| No. | Command |
+|:---:|:---|
+| 1 | `git status` |
+| 2 | `git pull` |
+| 3 | `git pull --rebase` |
+| 4 | `git add .` |
+| 5 | `git commit -m "..."` |
+| 6 | `git push` |
+| 7 | `git checkout -b <branch>` |
+| 8 | `git merge <branch>` |
+| 9 | `git log --oneline --graph --all` |
+| 10 | `git stash / git stash pop` |
+
+---
+
+> ⚠️ **Note:** Commands labeled **"Rare / Caution"** (`git reset --hard`, `git push --force`, `git branch -D`) can cause data loss or rewrite history. Only use them when you fully understand the consequences, and avoid using them on shared branches (`main`/`develop`) where others are working.
