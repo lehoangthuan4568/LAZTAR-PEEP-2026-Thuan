@@ -105,6 +105,64 @@ weight = 1
 | `git merge --abort` | Abort merge process and return to pre-merge state | Occasionally |
 | `git mergetool` | Open visual tool to assist with conflict resolution | Rare / Caution |
 
+### 8.1. What is a Conflict?
+A conflict occurs when two branches modify the **same lines of code** in a file, or one branch deletes a file while the other modifies it. When performing a `merge` or `rebase`, Git cannot automatically determine which code to keep and will pause the process for the developer to resolve it manually.
+
+### 8.2. What to use for resolution? (Tools)
+1. **VS Code Editor (Recommended - most intuitive):**
+   * VS Code automatically detects conflicts and displays quick action buttons above the code:
+     * **Accept Current Change:** Keep the code of your current branch (HEAD).
+     * **Accept Incoming Change:** Take the new code from the branch being merged.
+     * **Accept Both Changes:** Keep both sections of code.
+     * **Resolve in Merge Editor:** Open the specialized 3-column view (Left: current code, Right: incoming code, Middle: resulting merged code).
+2. **Conflict Markers (Visual indicators):**
+   * If viewing the file in a standard text editor, you will see these markers:
+     ```text
+     <<<<<<< HEAD (Your current code)
+     const apiUrl = "https://api.v1.domain.com";
+     =======
+     const apiUrl = "https://api.v2.domain.com";
+     >>>>>>> feature/new-api (Incoming branch code)
+     ```
+3. **Dedicated Mergetool:**
+   * Use the `git mergetool` command to open GUI software like **Beyond Compare, Meld, KDiff3, Sourcetree** when dealing with complex conflicts across many files.
+
+### 8.3. How to resolve? (Standard step-by-step process)
+* **Step 1: Identify conflicting files**
+  Run this command to list the files:
+  ```bash
+  git status
+  ```
+  *(Conflicting files will be under 'Unmerged paths' with the status 'both modified').*
+
+* **Step 2: Open files and resolve conflicts**
+  * Open the affected files in VS Code.
+  * Briefly discuss with the team member who also edited the file (if collaborating) to agree on the correct code.
+  * Click Accept Current / Incoming / Both, or manually edit the code as needed.
+  * Ensure all `<<<<<<<`, `=======`, `>>>>>>>` markers are completely removed.
+
+* **Step 3: Mark as resolved (Stage)**
+  ```bash
+  git add <modified-file-name>
+  # Or stage all modified files:
+  git add .
+  ```
+
+* **Step 4: Complete the process**
+  * If in a Merge process:
+    ```bash
+    git commit -m "Resolve merge conflict between main and feature branch"
+    ```
+  * If in a Rebase process (`git pull --rebase`):
+    ```bash
+    git rebase --continue
+    ```
+    *(Repeat Steps 2 and 3 if the next commit also has conflicts).*
+
+> ⚠️ **Emergency Warning - Abort if you make a mistake:**
+> * If merging and you mess up, run: `git merge --abort`
+> * If rebasing and you want to abort to the original state, run: `git rebase --abort`
+
 ---
 
 ## 9. Stashing Changes
