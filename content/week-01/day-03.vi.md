@@ -36,5 +36,5 @@ weight = 3
   * *Giải pháp:* Sử dụng `useEffect` kết hợp với Event Listener (`passive: true`) và `Intersection Observer API` để tối ưu hóa hiệu năng DOM thay vì lắng nghe sự kiện cuộn một cách liên tục.
 
 ## 5. Link dự án (Portfolio cá nhân)
-- **Vercel (Live Demo):** [Lê Hoàng Thuận | Frontend Developer](https://laztar-portfolio.vercel.app/)
+- **Vercel (Live Demo):** [Lê Hoàng Thuận](https://laztar-portfolio.vercel.app/)
 - **GitHub Repository:** [lehoangthuan4568/laztar-portfolio](https://github.com/lehoangthuan4568/laztar-portfolio)

@@ -176,3 +176,7 @@ Thực hành xây dựng trang Landing Page giới thiệu doanh nghiệp cho c�
 ### 4. Cách giải quyết
 - **Nghiên cứu và tái cấu trúc hệ thống thiết kế (Design System):** Chủ động nghiên cứu các nguyên tắc thiết kế giao diện doanh nghiệp (Enterprise UI) và phong cách Tối giản (Minimalism). Từ đó, chuẩn hóa lại hệ thống màu sắc (Navy/Trắng), ứng dụng nghệ thuật chữ với font Playfair Display nhằm tăng tính trang trọng, đồng thời cấu trúc lại các khối giao diện thành hệ thống lưới (Grid System) rõ ràng, chuyên nghiệp.
 - **Xử lý tài nguyên SVG cục bộ:** Để khắc phục lỗi `lucide-react`, tiến hành nhúng trực tiếp mã nguồn SVG của các mạng xã hội vào component Footer. Cách tiếp cận này đảm bảo tính ổn định lâu dài và loại bỏ sự phụ thuộc không cần thiết vào thư viện bên thứ ba.
+
+### 5. Link dự án (Landing Page)
+- **Vercel (Live Demo):** [LAZTAR](https://laztar-landing-page-thuan.vercel.app/)
+- **GitHub Repository:** [lehoangthuan4568/laztar-landing-page](https://github.com/lehoangthuan4568/laztar-landing-page)

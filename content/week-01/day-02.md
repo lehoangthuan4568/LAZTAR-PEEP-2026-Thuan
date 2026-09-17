@@ -176,3 +176,7 @@ Practiced building a corporate Landing Page for LAZTAR, emphasizing high profess
 ### 4. Resolutions
 - **Implemented Minimalist Design Principles:** Conducted independent research into enterprise UI/UX patterns and Minimalist design to overhaul the visual hierarchy. Standardized the color palette (strict Navy/White contrast), integrated the Playfair Display font to elevate typographic formality, and restructured convoluted UI components into clean, professional grid systems.
 - **Localized SVG Asset Management:** Addressed the `lucide-react` error by directly embedding raw SVG source code for social media icons into the Footer component. This approach ensures long-term stability and eliminates unnecessary dependencies on third-party library updates.
+
+### 5. Project Links
+- **Live Deployment (Vercel):** [LAZTAR](https://laztar-landing-page-thuan.vercel.app/)
+- **GitHub Repository:** [lehoangthuan4568/laztar-landing-page](https://github.com/lehoangthuan4568/laztar-landing-page)
