@@ -1,5 +1,5 @@
 +++
-title = "Day 01 - Comprehensive Git Handbook & Team Collaboration"
+title = "Day 01 - 15/09/2026 (On-site)"
 weight = 1
 +++
 
