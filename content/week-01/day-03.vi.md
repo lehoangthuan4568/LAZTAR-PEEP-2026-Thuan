@@ -1,5 +1,5 @@
 +++
-title = "Ngày 03 - Xây dựng và Triển khai Trang Portfolio Cá nhân với Next.js"
+title = "Day 03 - 17/09/2026 (Remote)"
 weight = 3
 +++
 
@@ -34,3 +34,7 @@ weight = 3
 * **Khó khăn 2: Quản lý tính trạng thái cuộn trang (Scroll state detection)**
   * *Vấn đề:* Cần hiển thị các thành phần động dựa trên vị trí cuộn của người dùng (ví dụ: Thanh điều hướng làm mờ, nút cuộn lên đầu trang) nhưng cần đảm bảo hiệu suất.
   * *Giải pháp:* Sử dụng `useEffect` kết hợp với Event Listener (`passive: true`) và `Intersection Observer API` để tối ưu hóa hiệu năng DOM thay vì lắng nghe sự kiện cuộn một cách liên tục.
+
+## 5. Link dự án (Portfolio cá nhân)
+- **Vercel (Live Demo):** [Lê Hoàng Thuận | Frontend Developer](https://laztar-portfolio.vercel.app/)
+- **GitHub Repository:** [lehoangthuan4568/laztar-portfolio](https://github.com/lehoangthuan4568/laztar-portfolio)

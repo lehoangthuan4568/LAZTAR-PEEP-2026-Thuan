@@ -1,5 +1,5 @@
 +++
-title = "Day 03 - Building and Deploying a Personal Portfolio with Next.js"
+title = "Day 03 - 17/09/2026 (Remote)"
 weight = 3
 +++
 
@@ -34,3 +34,7 @@ weight = 3
 * **Challenge 2: Efficient scroll state detection**
   * *Issue:* Required dynamic rendering of elements based on scroll position (e.g., blurred navigation bar, back-to-top button) without degrading performance.
   * *Resolution:* Leveraged the `useEffect` hook combined with optimized Event Listeners (`passive: true`) and the `Intersection Observer API` to minimize DOM manipulation overhead compared to continuous scroll event tracking.
+
+## 5. Project Links
+- **Live Deployment (Vercel):** [Lê Hoàng Thuận | Frontend Developer](https://laztar-portfolio.vercel.app/)
+- **GitHub Repository:** [lehoangthuan4568/laztar-portfolio](https://github.com/lehoangthuan4568/laztar-portfolio)
