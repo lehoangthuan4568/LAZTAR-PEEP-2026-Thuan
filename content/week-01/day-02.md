@@ -1,5 +1,5 @@
 +++
-title = "Day 02 - React & Next.js Theory and Landing Page Practice"
+title = "Day 02 - 16/09/2026 (Remote)"
 weight = 2
 +++
 
@@ -170,9 +170,9 @@ Practiced building a corporate Landing Page for LAZTAR, emphasizing high profess
 - **Static Asset Management:** Integrated a standardized icon suite (Lucide React) replacing static SVGs for scalable sizing and dynamic coloring. Configured `next.config.ts` to authorize external image domains (Unsplash).
 
 ### 3. Challenges Encountered
-- **Superficial Initial Design ("AI-generated look"):** Early iterations suffered from a generic, mass-produced aesthetic characterized by neon gradients and excessive border-radius, undermining the serious B2B corporate tone.
+- **Inconsistent Design Language and Brand Misalignment:** Early iterations of the interface suffered from an overly complex aesthetic, characterized by unnecessary neon gradients and excessive border-radius. This approach undermined the serious, trustworthy tone required for a B2B corporate landing page and lacked professional cohesion.
 - **Icon Library Compatibility Issues:** Encountered build errors when importing brand icons (Facebook, LinkedIn) from `lucide-react` due to their removal in the latest library version.
 
 ### 4. Resolutions
-- Consulted advanced design principles to overhaul the color system (strict Navy/White contrast), adopted the Playfair Display font for monumental typography, and restructured floating masonry layouts into crisp, professional grids.
-- Addressed the `lucide-react` error by directly embedding raw SVG source code for social media icons into the Footer component, ensuring stability without external third-party dependencies.
+- **Implemented Minimalist Design Principles:** Conducted independent research into enterprise UI/UX patterns and Minimalist design to overhaul the visual hierarchy. Standardized the color palette (strict Navy/White contrast), integrated the Playfair Display font to elevate typographic formality, and restructured convoluted UI components into clean, professional grid systems.
+- **Localized SVG Asset Management:** Addressed the `lucide-react` error by directly embedding raw SVG source code for social media icons into the Footer component. This approach ensures long-term stability and eliminates unnecessary dependencies on third-party library updates.

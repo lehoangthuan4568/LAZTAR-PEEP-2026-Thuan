@@ -1,5 +1,5 @@
 +++
-title = "Ngày 02 - Lý thuyết React & Next.js và Thực hành Landing Page"
+title = "Ngày 02 - 16/09/2026 (Remote)"
 weight = 2
 +++
 
@@ -170,9 +170,9 @@ Thực hành xây dựng trang Landing Page giới thiệu doanh nghiệp cho c�
 - **Xử lý tài nguyên tĩnh:** Tích hợp bộ icon chuẩn (Lucide React) thay cho SVGs tĩnh để dễ dàng scale kích thước và thay đổi màu sắc. Cấu hình `next.config.ts` cho phép tải ảnh từ external domains (Unsplash).
 
 ### 3. Khó khăn gặp phải
-- **Thiết kế ban đầu thiếu chiều sâu ("AI-generated look"):** Ở những lần lặp đầu tiên, giao diện mang cảm giác thiết kế hàng loạt, sử dụng màu gradient neon và bo góc quá đà, làm mất đi tính nghiêm túc của một công ty B2B.
+- **Thiết kế ban đầu thiếu tính đồng bộ và chưa phù hợp với nhận diện thương hiệu B2B:** Ở những lần lặp đầu tiên, việc định hướng UI chưa thống nhất, dẫn đến việc lạm dụng các hiệu ứng màu sắc rườm rà (neon gradients) và bo góc quá đà. Điều này làm giảm đi tính chuyên nghiệp, sự tối giản và độ tin cậy cần có của một trang web doanh nghiệp.
 - **Lỗi tương thích thư viện Icon:** Gặp lỗi build do import các brand icons (Facebook, LinkedIn) từ `lucide-react` trong phiên bản mới (thư viện đã gỡ bỏ các icon thương hiệu).
 
 ### 4. Cách giải quyết
-- Áp dụng các nguyên tắc thiết kế từ bộ kỹ năng **ui-ux-pro-max**, chuẩn hóa lại hệ màu (Navy/Trắng), sử dụng font Playfair Display cho tiêu đề lớn, thay đổi bố cục floating/masonry thành các grid thẳng thớm, chuyên nghiệp.
-- Để khắc phục lỗi `lucide-react`, tiến hành nhúng trực tiếp mã nguồn SVG của các mạng xã hội vào component Footer, đảm bảo tính ổn định và không phụ thuộc vào cập nhật thư viện bên thứ ba.
+- **Nghiên cứu và tái cấu trúc hệ thống thiết kế (Design System):** Chủ động nghiên cứu các nguyên tắc thiết kế giao diện doanh nghiệp (Enterprise UI) và phong cách Tối giản (Minimalism). Từ đó, chuẩn hóa lại hệ thống màu sắc (Navy/Trắng), ứng dụng nghệ thuật chữ với font Playfair Display nhằm tăng tính trang trọng, đồng thời cấu trúc lại các khối giao diện thành hệ thống lưới (Grid System) rõ ràng, chuyên nghiệp.
+- **Xử lý tài nguyên SVG cục bộ:** Để khắc phục lỗi `lucide-react`, tiến hành nhúng trực tiếp mã nguồn SVG của các mạng xã hội vào component Footer. Cách tiếp cận này đảm bảo tính ổn định lâu dài và loại bỏ sự phụ thuộc không cần thiết vào thư viện bên thứ ba.
