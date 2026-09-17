@@ -6,8 +6,6 @@ chapter = true
 
 # Week 04
 
-Daily PEEP 2026 notes for the fourth week. This week I went to the office for 3 days.
+Daily PEEP 2026 notes for the fourth week.
 
-- [Day 01 - Wednesday - Morning](day-01/)
-- [Day 02 - Thursday - All day](day-02/)
-- [Day 03 - Friday - All day](day-03/)
+*(Reports will be added as the week progresses)*
