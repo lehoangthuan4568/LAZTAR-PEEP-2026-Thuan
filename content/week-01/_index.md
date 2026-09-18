@@ -8,7 +8,7 @@ chapter = true
 
 Daily PEEP 2026 notes for the first week. This week I went to the office for 4 days.
 
-- [Day 01 - Tuesday - Full day](day-01/)
-- [Day 02 - Wednesday - Morning](day-02/)
-- [Day 03 - Thursday - Full day](day-03/)
-- [Day 04 - Friday - Full day](day-04/)
+- [Day 01 - Tuesday - On-site](day-01/)
+- [Day 02 - Wednesday - Remote](day-02/)
+- [Day 03 - Thursday - Remote](day-03/)
+- [Day 04 - Friday - On-site](day-04/)

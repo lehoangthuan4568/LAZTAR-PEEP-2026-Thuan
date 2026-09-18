@@ -36,5 +36,5 @@ weight = 3
   * *Resolution:* Leveraged the `useEffect` hook combined with optimized Event Listeners (`passive: true`) and the `Intersection Observer API` to minimize DOM manipulation overhead compared to continuous scroll event tracking.
 
 ## 5. Project Links
-- **Live Deployment (Vercel):** [Lê Hoàng Thuận | Frontend Developer](https://laztar-portfolio.vercel.app/)
+- **Live Deployment (Vercel):** [Lê Hoàng Thuận](https://laztar-portfolio.vercel.app/)
 - **GitHub Repository:** [lehoangthuan4568/laztar-portfolio](https://github.com/lehoangthuan4568/laztar-portfolio)
