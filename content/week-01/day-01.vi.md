@@ -1,5 +1,5 @@
 +++
-title = "Ngày 01 - Cẩm nang toàn tập Git & Làm việc nhóm"
+title = "Ngày 01 - 15/09/2026 (Office)"
 weight = 1
 +++
 
